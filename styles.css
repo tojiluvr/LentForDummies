@@ -7,6 +7,7 @@ body {
     color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #4C3C4B;
     color: white;
@@ -17,6 +18,27 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 /* Overview Section */
@@ -35,35 +57,6 @@ header h1 {
     line-height: 1.6;
 }
 
-/* Links Section */
-.links {
-    text-align: center;
-    padding: 20px;
-}
-
-.links h2 {
-    font-size: 2em;
-}
-
-.links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.links li {
-    margin: 10px 0;
-}
-
-.links a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 1.2em;
-}
-
-.links a:hover {
-    text-decoration: underline;
-}
-
 /* Footer Styles */
 footer {
     text-align: center;
@@ -78,11 +71,11 @@ footer {
         font-size: 2em;
     }
 
-    .overview p {
-        font-size: 1em;
+    nav ul {
+        text-align: center;
     }
 
-    .links h2 {
-        font-size: 1.5em;
+    .overview p {
+        font-size: 1em;
     }
 }
