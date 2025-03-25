@@ -34,11 +34,13 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.5em;  /* Increased size but smaller than the title */
+    transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #f4f4f4;  /* Removes blue glow and underlines */
+    text-decoration: none;
 }
 
 /* Overview Section */
