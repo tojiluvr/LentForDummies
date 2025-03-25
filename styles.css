@@ -40,89 +40,7 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-/* Main Content Styles */
-main {
-    padding: 40px 0;
-}
-
-h2 {
-    font-size: 2em;
-    color: #4C3C4B;
-}
-
-section {
-    background-color: white;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-section p {
-    line-height: 1.6;
-}
-
-/* Button Style */
-.btn {
-    display: inline-block;
-    background-color: #4C3C4B;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.btn:hover {
-    background-color: #5a475d;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #4C3C4B;
-    color: white;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
-    }
-
-    nav ul {
-        text-align: left;
-        margin-left: 20px;
-    }
-
-    section {
-        padding: 15px;
-
-/* Basic styles for body and main elements */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-/* Header styles */
-header {
-    text-align: center;
-    background-color: #2d3e50;
-    color: white;
-    padding: 20px 0;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-/* Overview section */
+/* Overview Section */
 .overview {
     text-align: center;
     padding: 30px;
@@ -139,7 +57,7 @@ h1 {
     margin: 0 auto;
 }
 
-/* Links section */
+/* Links Section */
 .links {
     text-align: center;
     padding: 20px;
@@ -168,13 +86,26 @@ h1 {
     text-decoration: underline;
 }
 
-/* Footer styles */
+/* Footer Styles */
 footer {
     text-align: center;
-    padding: 10px 0;
-    background-color: #2d3e50;
+    padding: 20px;
+    background-color: #4C3C4B;
     color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    section {
+        padding: 15px;
     }
 }
