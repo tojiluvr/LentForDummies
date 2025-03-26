@@ -20,8 +20,28 @@ function updateUsername() {
   const profilePic = document.getElementById("profile-pic");
 
   if (username !== "") {
-    // For now, just log it to the console
-    console.log("Username updated:", username);
+    // Update the displayed username in the message container (if necessary)
+    document.querySelectorAll('.username').forEach(el => {
+      el.textContent = username;
+    });
+
+    // Optionally, send the updated username to the server if needed
+    fetch('/api/update-username', { // Replace with your API endpoint
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Username updated:', data); // Handle success
+    })
+    .catch(error => {
+      console.error('Error updating username:', error); // Handle error
+    });
   }
 }
 
@@ -72,6 +92,26 @@ function sendMessage() {
 
     // Scroll to the bottom of the message container
     messageContainer.scrollTop = messageContainer.scrollHeight;
+
+    // Send the message to the server using fetch (POST request)
+    fetch('/api/messages', { // Replace with your API endpoint
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+        message: messageText,
+        profilePic: profilePicSrc,
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Message sent:', data); // Handle success
+    })
+    .catch(error => {
+      console.error('Error sending message:', error); // Handle error
+    });
   }
 }
 
