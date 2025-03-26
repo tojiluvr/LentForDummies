@@ -1,4 +1,3 @@
-
 // Profile Picture Preview from File Input
 function previewProfilePicFromFile(event) {
   const file = event.target.files[0];
@@ -43,7 +42,8 @@ function sendMessage() {
 
     // Create profile pic and username elements
     const avatarElement = document.createElement("img");
-    avatarElement.src = document.getElementById("profile-pic").src || "default-avatar.png"; // Default to a placeholder if no profile pic
+    const profilePicSrc = document.getElementById("profile-pic").src;
+    avatarElement.src = profilePicSrc && profilePicSrc !== "" ? profilePicSrc : "default-avatar.png"; // Default to a placeholder if no profile pic
     avatarElement.classList.add("avatar");
 
     const usernameElement = document.createElement("span");
@@ -74,3 +74,17 @@ function sendMessage() {
     messageContainer.scrollTop = messageContainer.scrollHeight;
   }
 }
+
+// Add event listeners for message sending
+document.getElementById("send-button").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the default action (if it's a form submit)
+  sendMessage(); // Call the send message function
+});
+
+// Add event listener to send message when Enter key is pressed in the message input
+document.getElementById("message-input").addEventListener("keydown", function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // Prevent form submit if Enter is pressed
+    sendMessage(); // Call the send message function
+  }
+});
