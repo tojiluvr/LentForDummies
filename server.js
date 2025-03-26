@@ -2,7 +2,7 @@
 
 // Connect to the server using socket.io
 const socket = io();
-
+       
 // Get the message container
 const messageContainer = document.getElementById("message-container");
 
